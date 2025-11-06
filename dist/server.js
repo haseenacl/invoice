@@ -19,6 +19,10 @@ app.use(express_1.default.json());
 // ✅ Routes
 const invoiceroutes_1 = __importDefault(require("./routes/invoiceroutes"));
 app.use("/api/invoices", invoiceroutes_1.default);
+// ✅ Default route (home)
+app.get("/", (req, res) => {
+    res.send("🚀 Invoice API is running successfully on Render!");
+});
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 //# sourceMappingURL=server.js.map
