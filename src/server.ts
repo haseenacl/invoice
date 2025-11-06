@@ -20,6 +20,12 @@ connectDB();  // ✅ this will connect using your MONGO_URI
 import invoiceRoutes from "./routes/invoiceroutes";
 app.use("/api/invoices", invoiceRoutes);
 
+// ✅ Default route (home)
+app.get("/", (req, res) => {
+  res.send("🚀 Invoice API is running successfully on Render!");
+});
+
+
 const PORT = process.env.PORT || 5001;
 
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
