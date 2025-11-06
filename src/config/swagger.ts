@@ -12,8 +12,12 @@ const options = {
     },
     servers: [
       {
-        url: "https://invoice-z4kt.onrender.com",
-        description: "Local server",
+        url: "https://invoice-z4kt.onrender.com/api",
+        description: "Render deployed API server",
+      },
+      {
+        url: "http://localhost:5001/api",
+        description: "Local development server",
       },
     ],
   },
